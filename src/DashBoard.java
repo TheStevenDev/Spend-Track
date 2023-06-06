@@ -335,6 +335,7 @@ public class DashBoard extends JFrame implements MouseListener, ActionListener {
 
         //Refresh
         if (e.getSource()==refreshButton){
+            dispose();
             SwingUtilities.invokeLater(() -> {
                 DashBoard d = new DashBoard(this.user);
                 d.setVisible(true);
